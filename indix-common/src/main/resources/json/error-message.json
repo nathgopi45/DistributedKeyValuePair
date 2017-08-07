@@ -1,0 +1,37 @@
+[
+	{
+		"status": "422",
+		"code": "M0000001",
+		"message": "Missing query parameters in the request",
+		"moreinfo": "Please provide a query parameter to get the records"
+	},{
+		"status": "422",
+		"code": "M0000002",
+		"message": "Missing mandatory parameters in the request",
+		"moreinfo": "Please provide all mandatory parameters in request"
+	},
+	{
+		"status": "404",
+		"code": "I0000001",
+		"message": "No records found for the query Param",
+		"moreinfo": "Please try with some other input in the query param"
+	},
+	{
+		"status": "422",
+		"code": "I0000002",
+		"message": "Invalid Input Date",
+		"moreinfo": "Date format of the date in query param is incorrect"
+	},
+	{
+		"status": "422",
+		"code": "I0000003",
+		"message": "Invalid <fromdatevalue>to<todatevalue>",
+		"moreinfo": "<fromdatevalue> should be before <todatevalue>"
+	},
+	{
+		"status": "400",
+		"code": "I0000004",
+		"message": "Mandatory Parameter missing",
+		"moreinfo": "This Paramter is missing:"
+	}
+]
