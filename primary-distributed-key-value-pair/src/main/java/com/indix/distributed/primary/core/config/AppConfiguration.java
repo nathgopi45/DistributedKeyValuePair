@@ -6,169 +6,58 @@ import org.springframework.stereotype.Component;
 @Component
 public class AppConfiguration {
 
-  @Value("${kafka.broker.address}")
-  private String kafkaBrokerAdress;
+	@Value("${kafka.broker.address}")
+	private String kafkaBrokerAdress;
+	@Value("${mongodb.replicaset}")
+	private String replicaSet;
 
-  @Value("${kafka.tracking.event.topic}")
-  private String trackingEventTopic;
+	@Value("${mongodb.dbname}")
+	private String dbName;
 
-  @Value("${kafka.vehicle.event.topic}")
-  private String vehicleEventTopic;
+	@Value("${mongodb.username}")
+	private String userName;
 
-  @Value("${kafka.publisher.dhl.event.topic}")
-  private String publisherDhlTopic;
+	@Value("${mongodb.password}")
+	private String password;
 
-  @Value("${kafka.logistic.unit.event.topic}")
-  private String logisticEventTopic;
+	public String getKafkaBrokerAdress() {
+		return kafkaBrokerAdress;
+	}
 
-  @Value("${kafka.geolocation.event.topic}")
-  private String geoLocationEventTopic;
+	public void setKafkaBrokerAdress(String kafkaBrokerAdress) {
+		this.kafkaBrokerAdress = kafkaBrokerAdress;
+	}
 
-  @Value("${identity.url}")
-  private String identityServiceURL;
+	public String getReplicaSet() {
+		return replicaSet;
+	}
 
-  @Value("${identity.clientid}")
-  private String identityClientId;
+	public void setReplicaSet(String replicaSet) {
+		this.replicaSet = replicaSet;
+	}
 
-  @Value("${identity.enabled}")
-  private boolean identityEnabled;
+	public String getDbName() {
+		return dbName;
+	}
 
-  @Value("${identity.skipAuth.domains}")
-  private String identitySkipAuthDomains;
+	public void setDbName(String dbName) {
+		this.dbName = dbName;
+	}
 
-  @Value("${ehcache.xml}")
-  private String ehCacheXml;
+	public String getUserName() {
+		return userName;
+	}
 
-  @Value("${mongodb.replicaset}")
-  private String replicaSet;
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
-  @Value("${mongodb.dbname}")
-  private String dbName;
+	public String getPassword() {
+		return password;
+	}
 
-  @Value("${mongodb.username}")
-  private String userName;
-
-  @Value("${mongodb.password}")
-  private String password;
-
-  public String getGeoLocationEventTopic() {
-    return geoLocationEventTopic;
-  }
-
-  public void setGeoLocationEventTopic(String geoLocationEventTopic) {
-    this.geoLocationEventTopic = geoLocationEventTopic;
-  }
-
-  public String getPublisherDhlTopic() {
-    return publisherDhlTopic;
-  }
-
-  public void setPublisherDhlTopic(String publisherDhlTopic) {
-    this.publisherDhlTopic = publisherDhlTopic;
-  }
-
-  public String getKafkaBrokerAdress() {
-    return kafkaBrokerAdress;
-  }
-
-  public void setKafkaBrokerAdress(String kafkaBrokerAdress) {
-    this.kafkaBrokerAdress = kafkaBrokerAdress;
-  }
-
-  public String getIdentityServiceURL() {
-    return identityServiceURL;
-  }
-
-  public void setIdentityServiceURL(String identityServiceURL) {
-    this.identityServiceURL = identityServiceURL;
-  }
-
-  public String getIdentityClientId() {
-    return identityClientId;
-  }
-
-  public void setIdentityClientId(String identityClientId) {
-    this.identityClientId = identityClientId;
-  }
-
-  public boolean isIdentityEnabled() {
-    return identityEnabled;
-  }
-
-  public void setIdentityEnabled(boolean identityEnabled) {
-    this.identityEnabled = identityEnabled;
-  }
-
-  public String getIdentitySkipAuthDomains() {
-    return identitySkipAuthDomains;
-  }
-
-  public void setIdentitySkipAuthDomains(String identitySkipAuthDomains) {
-    this.identitySkipAuthDomains = identitySkipAuthDomains;
-  }
-
-  public String getTrackingEventTopic() {
-    return trackingEventTopic;
-  }
-
-  public void setTrackingEventTopic(String trackingEventTopic) {
-    this.trackingEventTopic = trackingEventTopic;
-  }
-
-  public String getVehicleEventTopic() {
-    return vehicleEventTopic;
-  }
-
-  public void setVehicleEventTopic(String vehicleEventTopic) {
-    this.vehicleEventTopic = vehicleEventTopic;
-  }
-
-  public String getLogisticEventTopic() {
-    return logisticEventTopic;
-  }
-
-  public void setLogisticEventTopic(String logisticEventTopic) {
-    this.logisticEventTopic = logisticEventTopic;
-  }
-
-  public String getEhCacheXml() {
-    return ehCacheXml;
-  }
-
-  public void setEhCacheXml(String ehCacheXml) {
-    this.ehCacheXml = ehCacheXml;
-  }
-
-  public String getReplicaSet() {
-    return replicaSet;
-  }
-
-  public void setReplicaSet(String replicaSet) {
-    this.replicaSet = replicaSet;
-  }
-
-  public String getDbName() {
-    return dbName;
-  }
-
-  public void setDbName(String dbName) {
-    this.dbName = dbName;
-  }
-
-  public String getUserName() {
-    return userName;
-  }
-
-  public void setUserName(String userName) {
-    this.userName = userName;
-  }
-
-  public String getPassword() {
-    return password;
-  }
-
-  public void setPassword(String password) {
-    this.password = password;
-  }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 }

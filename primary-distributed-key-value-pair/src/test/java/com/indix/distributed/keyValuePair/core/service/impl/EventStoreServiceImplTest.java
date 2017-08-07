@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import net.minidev.json.parser.ParseException;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -12,7 +14,6 @@ import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import com.indix.distributed.common.model.events.DistributingEvent;
-import com.indix.distributed.primary.core.config.Producer;
 import com.indix.distributed.primary.core.dao.PrimaryKeyValueDAO;
 import com.indix.distributed.primary.core.kafka.SimpleProducer;
 import com.indix.distributed.primary.core.service.impl.EventStoreServiceImpl;
@@ -25,14 +26,12 @@ public class EventStoreServiceImplTest {
 	@Mock
 	private SimpleProducer simpleProducer;
 
-	@Mock
-	private Producer<String,DistributingEvent> producer;
 
 	@InjectMocks
 	private EventStoreServiceImpl eventStoreServiceImpl;
 
 	@Test
-	public void serviceProcessShouldCallFindFunction() {
+	public void serviceProcessShouldCallFindFunction() throws ParseException {
 		Mockito.doNothing().when(simpleProducer).publishEventStore(Mockito.any(DistributingEvent.class));;
 		eventStoreServiceImpl.process((DistributingEvent) createDistributingEvent());
 	}

@@ -66,7 +66,13 @@ public class EventController  {
 	}
 
 	protected DistributingEvent process(DistributingEvent event) {
-		return eventStoreService.process(event);
+		try {
+			return eventStoreService.process(event);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	@ExceptionHandler(KafkaConnectException.class)

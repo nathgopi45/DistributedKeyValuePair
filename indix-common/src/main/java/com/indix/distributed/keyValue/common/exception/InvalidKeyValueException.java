@@ -1,4 +1,4 @@
-package com.indix.distributed.primary.rest.exception;
+package com.indix.distributed.keyValue.common.exception;
 
 public class InvalidKeyValueException extends Exception {
 

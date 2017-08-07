@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Component;
 
 import com.indix.distributed.common.model.KeyValuePair;
-import com.indix.distributed.primary.rest.exception.InvalidKeyValueException;
+import com.indix.distributed.keyValue.common.exception.InvalidKeyValueException;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
 

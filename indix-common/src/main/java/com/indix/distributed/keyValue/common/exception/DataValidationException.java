@@ -1,6 +1,8 @@
-package com.indix.distributed.keyValue.secondary.exception;
+package com.indix.distributed.keyValue.common.exception;
 
 import java.util.List;
+
+import com.indix.distributed.common.model.ErrorInfo;
 
 public class DataValidationException extends RuntimeException {
 

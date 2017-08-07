@@ -9,10 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
+import com.indix.distributed.common.model.ErrorInfo;
 import com.indix.distributed.common.model.KeyValuePair;
+import com.indix.distributed.keyValue.common.exception.DataValidationException;
 import com.indix.distributed.keyValue.secondary.dao.SecondaryKeyValueDAO;
-import com.indix.distributed.keyValue.secondary.exception.DataValidationException;
-import com.indix.distributed.keyValue.secondary.exception.ErrorInfo;
 
 @Component
 public class SecondaryKeyValueService {

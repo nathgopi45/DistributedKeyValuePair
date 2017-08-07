@@ -9,7 +9,6 @@ import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.indix.distributed.common.model.KeyValuePair;
-import com.indix.distributed.common.model.events.DistributingEvent;
 
 public class KafkaSecondaryKeyValueDeSerializer implements Deserializer<KeyValuePair> {
 

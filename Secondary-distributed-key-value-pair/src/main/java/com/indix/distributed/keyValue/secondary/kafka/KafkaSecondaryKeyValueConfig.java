@@ -22,6 +22,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.ProducerListener;
 
+import com.indix.distributed.common.model.Event;
 import com.indix.distributed.common.model.events.DistributingEvent;
 import com.indix.distributed.keyValue.secondary.config.SecondaryKeyValueApplicationConfiguration;
 

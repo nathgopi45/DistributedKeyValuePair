@@ -23,7 +23,7 @@ import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.ProducerListener;
 
 import com.indix.distributed.common.model.events.DistributingEvent;
-import com.indix.distributed.keyValue.secondary.exception.KafkaConnectException;
+import com.indix.distributed.keyValue.common.exception.KafkaConnectException;
 
 @Configuration
 @EnableKafka

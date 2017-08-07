@@ -10,7 +10,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.indix.distributed.keyValue.secondary.exception.EventHandlerException;
+import com.indix.distributed.keyValue.common.exception.EventHandlerException;
 import com.indix.distributed.keyValue.secondary.service.SecondaryKeyValueService;
 
 @RunWith(MockitoJUnitRunner.class)

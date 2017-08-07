@@ -11,6 +11,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
+import net.minidev.json.parser.ParseException;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -42,12 +44,17 @@ public class EventControllerTest {
 
   @Before
   public void init() {
-    when(service.process(Mockito.any(DistributingEvent.class))).thenReturn(null);
+    try {
+		when(service.process(Mockito.any(DistributingEvent.class))).thenReturn(null);
+	} catch (ParseException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
   }
  
 
   @Test(expected = HttpMessageNotReadableException.class)
-  public void shouldCallExceptionHandlerForMessageNotReadable() throws IOException, KafkaConnectException {
+  public void shouldCallExceptionHandlerForMessageNotReadable() throws IOException, KafkaConnectException, ParseException {
     doThrow(new HttpMessageNotReadableException("message not readable")).when(service)
         .process(Mockito.any(DistributingEvent.class));
     controller
@@ -59,7 +66,7 @@ public class EventControllerTest {
   }
   
   @Test
-  public void shouldCallServiceForValidEventRequest() throws IOException, KafkaConnectException {
+  public void shouldCallServiceForValidEventRequest() throws IOException, KafkaConnectException, ParseException {
     controller
         .createGenericEvent(
             "{\"eventDateTime\":\"2016-12-02T15:30:30\",\"eventType\":\"LogisticUnitScheduled\","

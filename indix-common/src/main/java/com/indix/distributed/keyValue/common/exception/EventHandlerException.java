@@ -1,6 +1,6 @@
-package com.indix.distributed.keyValue.secondary.exception;
+package com.indix.distributed.keyValue.common.exception;
 
-import com.indix.distributed.keyValue.secondary.kafka.Event;
+import com.indix.distributed.common.model.Event;
 
 public class EventHandlerException extends Exception {
 

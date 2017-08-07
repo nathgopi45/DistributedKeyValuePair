@@ -11,8 +11,8 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.convert.MongoConverter;
 
 import com.indix.distributed.common.model.KeyValuePair;
+import com.indix.distributed.keyValue.common.exception.InvalidKeyValueException;
 import com.indix.distributed.primary.core.dao.PrimaryKeyValueDAO;
-import com.indix.distributed.primary.rest.exception.InvalidKeyValueException;
 
 
 @RunWith(MockitoJUnitRunner.class)
